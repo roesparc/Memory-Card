@@ -6,3 +6,18 @@
   margin: 0;
   padding: 0;
 }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 22rem;
+}
+
+.card p {
+  font-size: 1.5rem;
+  text-align: center;
+}
