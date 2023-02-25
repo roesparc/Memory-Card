@@ -2,10 +2,24 @@ import { useEffect, useState } from "react";
 import cards from "../assets/cardData";
 
 const Game = () => {
+  const [clickedCards, setClickedCards] = useState([]);
+  const handleCardClick = (id) => {
+    clickedCards.includes(id)
+      ? setClickedCards([])
+      : setClickedCards([...clickedCards, id]);
+  };
+
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
-  const [randomCards, setRandomCards] = useState(cards);
+  useEffect(() => {
+    setCurrentScore(clickedCards.length);
 
+    setBestScore((prevBestScore) =>
+      prevBestScore < clickedCards.length ? clickedCards.length : prevBestScore
+    );
+  }, [clickedCards]);
+
+  const [randomCards, setRandomCards] = useState(cards);
   useEffect(() => {
     const shuffled = cards.slice();
 
@@ -32,7 +46,11 @@ const Game = () => {
 
       <div className="cards">
         {randomCards.map((card) => (
-          <div key={card.id} className="card">
+          <div
+            key={card.id}
+            className="card"
+            onClick={() => handleCardClick(card.id)}
+          >
             <img src={card.image} alt={card.name} />
             <p>{card.name}</p>
           </div>
