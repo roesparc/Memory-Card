@@ -1,47 +1,94 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import cards from "../assets/cardData";
 
-const Game = () => {
-  const [clickedCards, setClickedCards] = useState([]);
-  const handleCardClick = (id) => {
-    clickedCards.includes(id)
-      ? setClickedCards([])
-      : setClickedCards([...clickedCards, id]);
-  };
+const shuffleCards = () => {
+  const shuffled = cards.slice();
 
+  for (let i = shuffled.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+
+  return shuffled;
+};
+
+const Game = () => {
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
+  const [clickedCards, setClickedCards] = useState([]);
+  const [randomCards, setRandomCards] = useState(shuffleCards());
+  const [gameOver, setGameOver] = useState(false);
+  const [newBestScore, setNewBestScore] = useState({
+    isBestScore: false,
+    score: 0,
+  });
+
+  const handleCardClick = useCallback((id) => {
+    setClickedCards((prevClickedCards) =>
+      prevClickedCards.includes(id) ? [] : [...prevClickedCards, id]
+    );
+  }, []);
+
   useEffect(() => {
-    setCurrentScore(clickedCards.length);
+    setCurrentScore((prevCurrentScore) =>
+      clickedCards.length ? clickedCards.length : prevCurrentScore
+    );
 
     setBestScore((prevBestScore) =>
       prevBestScore < clickedCards.length ? clickedCards.length : prevBestScore
     );
   }, [clickedCards]);
 
-  const [randomCards, setRandomCards] = useState(cards);
   useEffect(() => {
-    const shuffled = cards.slice();
+    if (!clickedCards.length && currentScore) {
+      setGameOver(true);
 
-    for (let i = shuffled.length - 1; i > 0; i -= 1) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      if (bestScore > newBestScore.score)
+        setNewBestScore({ isBestScore: true, score: bestScore });
     }
+  }, [clickedCards, bestScore, currentScore, newBestScore]);
 
-    setRandomCards(shuffled);
+  useEffect(() => {
+    if (!gameOver) {
+      setCurrentScore(0);
+      setNewBestScore((prevBestScore) => ({
+        ...prevBestScore,
+        isBestScore: false,
+      }));
+    }
+  }, [gameOver]);
+
+  useEffect(() => {
+    setRandomCards(shuffleCards());
   }, [currentScore]);
 
   return (
     <div className="game">
       <div className="scoreboard">
         <div className="current-score">
-          <p>Current Score</p>
+          <h3>Current Score</h3>
           <p>{currentScore}</p>
         </div>
         <div className="best-score">
-          <p>Best Score</p>
+          <h3>Best Score</h3>
           <p>{bestScore}</p>
         </div>
+      </div>
+
+      <div
+        className="game-over"
+        style={gameOver ? { display: "block" } : { display: "none" }}
+      >
+        <h2>Game Over</h2>
+        {newBestScore.isBestScore ? (
+          <h3 className="new-best-score">New Best Score!</h3>
+        ) : (
+          <h3>Score</h3>
+        )}
+        <p>{currentScore}</p>
+        <p>Best Score</p>
+        <p>{bestScore}</p>
+        <button onClick={() => setGameOver(false)}>Play Again</button>
       </div>
 
       <div className="cards">
