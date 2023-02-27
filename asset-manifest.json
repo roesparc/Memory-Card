@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c2dd24fd.css",
+    "main.js": "/static/js/main.ff2c1091.js",
+    "static/media/gollum.jpg": "/static/media/gollum.c429201f068f0f5de735.jpg",
+    "static/media/merry.jpg": "/static/media/merry.3bd7fe0d725f08e8005a.jpg",
+    "static/media/pippin.jpg": "/static/media/pippin.59897e5f6f41bc355171.jpg",
+    "static/media/sauron.jpg": "/static/media/sauron.2030acb013b464a1e5cc.jpg",
+    "static/media/gandalf.jpg": "/static/media/gandalf.e2b54b79433b77a7f255.jpg",
+    "static/media/bilbo.jpg": "/static/media/bilbo.7d94122cd27a7d45e7b3.jpg",
+    "static/media/aragorn.jpg": "/static/media/aragorn.7161f819d0365ed2fd20.jpg",
+    "static/media/gimli.jpg": "/static/media/gimli.42682644871088fe2c3a.jpg",
+    "static/media/sam.jpg": "/static/media/sam.3ebee582c0c396cbed08.jpg",
+    "static/media/legolas.jpg": "/static/media/legolas.6d07a922aeeae4d608d6.jpg",
+    "static/media/boromir.jpg": "/static/media/boromir.04cdde03dc67fa1ca8eb.jpg",
+    "static/media/frodo.jpg": "/static/media/frodo.c5c672c8def73b0d74e2.jpg",
+    "index.html": "/index.html",
+    "main.c2dd24fd.css.map": "/static/css/main.c2dd24fd.css.map",
+    "main.ff2c1091.js.map": "/static/js/main.ff2c1091.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c2dd24fd.css",
+    "static/js/main.ff2c1091.js"
+  ]
+}
