@@ -14,32 +14,32 @@ import bilbo from "./img/bilbo.jpg";
 const cards = [
   {
     id: 1,
-    name: "Frodo Baggins",
+    name: "Frodo",
     image: frodo,
   },
   {
     id: 2,
-    name: "Samwise Gamgee",
+    name: "Sam",
     image: sam,
   },
   {
     id: 3,
-    name: "Peregrin Took",
+    name: "Pippin",
     image: pippin,
   },
   {
     id: 4,
-    name: "Meriadoc Brandybuck",
+    name: "Merry",
     image: merry,
   },
   {
     id: 5,
-    name: "Gandalf the Grey",
+    name: "Gandalf",
     image: gandalf,
   },
   {
     id: 6,
-    name: "Aragorn II Elessar",
+    name: "Aragorn",
     image: aragorn,
   },
   {
@@ -69,7 +69,7 @@ const cards = [
   },
   {
     id: 12,
-    name: "Bilbo Baggins",
+    name: "Bilbo",
     image: bilbo,
   },
 ];
