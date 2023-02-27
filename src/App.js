@@ -5,6 +5,7 @@ function App() {
     <div className="App">
       <header>
         <h1>LOTR Memory Card</h1>
+        <p>Don't click the same card twice!</p>
       </header>
       <main>
         <Game />
