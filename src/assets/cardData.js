@@ -1,77 +1,18 @@
-import frodo from "./img/frodo.jpg";
-import sam from "./img/sam.jpg";
-import pippin from "./img/pippin.jpg";
-import merry from "./img/merry.jpg";
-import gandalf from "./img/gandalf.jpg";
-import aragorn from "./img/aragorn.jpg";
-import legolas from "./img/legolas.jpg";
-import gimli from "./img/gimli.jpg";
-import boromir from "./img/boromir.jpg";
-import sauron from "./img/sauron.jpg";
-import gollum from "./img/gollum.jpg";
-import bilbo from "./img/bilbo.jpg";
+const createCard = (id, name, image) => ({ id, name, image });
 
 const cards = [
-  {
-    id: 1,
-    name: "Frodo",
-    image: frodo,
-  },
-  {
-    id: 2,
-    name: "Sam",
-    image: sam,
-  },
-  {
-    id: 3,
-    name: "Pippin",
-    image: pippin,
-  },
-  {
-    id: 4,
-    name: "Merry",
-    image: merry,
-  },
-  {
-    id: 5,
-    name: "Gandalf",
-    image: gandalf,
-  },
-  {
-    id: 6,
-    name: "Aragorn",
-    image: aragorn,
-  },
-  {
-    id: 7,
-    name: "Legolas",
-    image: legolas,
-  },
-  {
-    id: 8,
-    name: "Gimli",
-    image: gimli,
-  },
-  {
-    id: 9,
-    name: "Boromir",
-    image: boromir,
-  },
-  {
-    id: 10,
-    name: "Sauron",
-    image: sauron,
-  },
-  {
-    id: 11,
-    name: "Gollum",
-    image: gollum,
-  },
-  {
-    id: 12,
-    name: "Bilbo",
-    image: bilbo,
-  },
+  createCard(1, "Frodo", require("./img/frodo.jpg")),
+  createCard(2, "Sam", require("./img/sam.jpg")),
+  createCard(3, "Pippin", require("./img/pippin.jpg")),
+  createCard(4, "Merry", require("./img/merry.jpg")),
+  createCard(5, "Gandalf", require("./img/gandalf.jpg")),
+  createCard(6, "Aragorn", require("./img/aragorn.jpg")),
+  createCard(7, "Legolas", require("./img/legolas.jpg")),
+  createCard(8, "Gimli", require("./img/gimli.jpg")),
+  createCard(9, "Boromir", require("./img/boromir.jpg")),
+  createCard(10, "Sauron", require("./img/sauron.jpg")),
+  createCard(11, "Gollum", require("./img/gollum.jpg")),
+  createCard(12, "Bilbo", require("./img/bilbo.jpg")),
 ];
 
 export default cards;
