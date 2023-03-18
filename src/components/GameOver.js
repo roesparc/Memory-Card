@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import cards from "../assets/cardData";
+import styles from "../styles/GameOver.module.css";
 
 const GameOver = ({
   clickedCards,
@@ -49,16 +50,16 @@ const GameOver = ({
   }, [playerWins, setCurrentScore, setClickedCards]);
 
   return (
-    <div className="game-over">
+    <div className={styles.gameOver}>
       <div
-        id="overlay"
+        id={styles.overlay}
         style={
           playerWins || gameOver ? { display: "block" } : { display: "none" }
         }
       ></div>
 
       <div
-        className="player-wins"
+        className={styles.playerWins}
         style={playerWins ? { display: "block" } : { display: "none" }}
       >
         <h2>You Win!</h2>
@@ -68,12 +69,12 @@ const GameOver = ({
       </div>
 
       <div
-        className="player-loses"
+        className={styles.playerLoses}
         style={gameOver ? { display: "block" } : { display: "none" }}
       >
         <h2>Game Over</h2>
         {newBestScore.isBestScore ? (
-          <h3 className="new-best-score">New Best Score!</h3>
+          <h3 className={styles.newBestScore}>New Best Score!</h3>
         ) : (
           <h3>Score</h3>
         )}

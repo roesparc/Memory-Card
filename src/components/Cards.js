@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import cards from "../assets/cardData";
+import styles from "../styles/Cards.module.css";
 
 const shuffleCards = () => {
   const shuffled = cards.slice();
@@ -29,11 +30,11 @@ const Cards = ({ currentScore, setClickedCards }) => {
   }, [currentScore]);
 
   return (
-    <div className="cards">
+    <div className={styles.cards}>
       {randomCards.map((card) => (
         <div
           key={card.id}
-          className="card"
+          className={styles.card}
           onClick={() => handleCardClick(card.id)}
         >
           <img src={card.image} alt={card.name} />

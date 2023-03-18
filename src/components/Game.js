@@ -2,6 +2,7 @@ import { useState } from "react";
 import Cards from "./Cards";
 import GameOver from "./GameOver";
 import Scoreboard from "./Scoreboard";
+import styles from "../styles/Game.module.css";
 
 const Game = () => {
   const [currentScore, setCurrentScore] = useState(0);
@@ -9,7 +10,7 @@ const Game = () => {
   const [clickedCards, setClickedCards] = useState([]);
 
   return (
-    <div className="game">
+    <div className={styles.game}>
       <Scoreboard
         currentScore={currentScore}
         bestScore={bestScore}

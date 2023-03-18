@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import styles from "../styles/ScoreBoard.module.css";
 
 const Scoreboard = ({
   currentScore,
@@ -18,12 +19,12 @@ const Scoreboard = ({
   }, [clickedCards, setCurrentScore, setBestScore]);
 
   return (
-    <div className="scoreboard">
-      <div className="current-score">
+    <div className={styles.scoreboard}>
+      <div className={styles.currentScore}>
         <h3>Current Score</h3>
         <p>{currentScore}</p>
       </div>
-      <div className="best-score">
+      <div className={styles.bestScore}>
         <h3>Best Score</h3>
         <p>{bestScore}</p>
       </div>

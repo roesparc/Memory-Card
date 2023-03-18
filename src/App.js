@@ -1,21 +1,23 @@
 import Game from "./components/Game";
+import styles from "./styles/App.module.css";
+import { FaGithub } from "react-icons/fa";
 
 function App() {
   return (
-    <div className="App">
-      <header>
+    <div className={styles.app}>
+      <header className={styles.header}>
         <h1>LOTR Memory Card</h1>
         <p>Don't click the same card twice!</p>
       </header>
-      <main>
+      <main className={styles.main}>
         <Game />
       </main>
-      <footer>
+      <footer className={styles.footer}>
         <p>
           By <a href="https://github.com/roesparc/">roesparc</a>
         </p>
         <a href="https://github.com/roesparc/">
-          <i className="fa-brands fa-github"></i>
+          <FaGithub className={styles.githubLogo} />
         </a>
       </footer>
     </div>
