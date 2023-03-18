@@ -1,0 +1,32 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.card {
+  height: 24rem;
+  padding: 1rem;
+  border-radius: var(--card-border-radius);
+  background-color: var(--main-color-2);
+  box-shadow: 1px 2px 5px var(--main-color-1);
+  cursor: pointer;
+  transition: var(--transition-standard);
+}
+.card:hover {
+  transform: scale(0.98);
+  box-shadow: 0px 0px 2px var(--main-color-1);
+}
+
+.card img {
+  width: 22rem;
+  border-radius: var(--card-border-radius);
+}
+
+.card p {
+  margin: 2rem 0;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}

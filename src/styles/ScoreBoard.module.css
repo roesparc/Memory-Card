@@ -1,0 +1,15 @@
+.scoreboard {
+  margin: 3rem 0;
+  display: flex;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.scoreboard div {
+  width: 21rem;
+}
+
+.scoreboard p {
+  font-size: 4rem;
+  text-shadow: 0 0 5px #00000052;
+}

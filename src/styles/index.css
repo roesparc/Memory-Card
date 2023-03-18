@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=IM+Fell+English+SC&display=swap");
+
+:root {
+  font-size: 12px;
+  font-family: "Cinzel Decorative", cursive;
+  color: #0000008c;
+
+  --main-color-1: #7c7552;
+  --main-color-2: #e2d9a9;
+
+  --text-highlight-color-1: #e8b24d;
+  --text-highlight-shadow: 0 0 3px #000000;
+  --text-highlight-color-2: #457d45;
+  --text-highlight-shadow-2: 0 0 5px #457d456e;
+
+  --overlay-color: #7c755280;
+  --game-over-div-color: #e2d9a9e6;
+
+  --transition-standard: all 200ms ease;
+  --card-border-radius: 0.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: "Cinzel Decorative", cursive;
+  cursor: pointer;
+}
