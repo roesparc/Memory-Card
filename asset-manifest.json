@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Memory-Card/static/css/main.c2dd24fd.css",
-    "main.js": "/Memory-Card/static/js/main.33df84e7.js",
+    "main.css": "/Memory-Card/static/css/main.6827cf56.css",
+    "main.js": "/Memory-Card/static/js/main.4f862392.js",
     "static/media/gollum.jpg": "/Memory-Card/static/media/gollum.c429201f068f0f5de735.jpg",
     "static/media/merry.jpg": "/Memory-Card/static/media/merry.3bd7fe0d725f08e8005a.jpg",
     "static/media/pippin.jpg": "/Memory-Card/static/media/pippin.59897e5f6f41bc355171.jpg",
@@ -15,11 +15,11 @@
     "static/media/boromir.jpg": "/Memory-Card/static/media/boromir.04cdde03dc67fa1ca8eb.jpg",
     "static/media/frodo.jpg": "/Memory-Card/static/media/frodo.c5c672c8def73b0d74e2.jpg",
     "index.html": "/Memory-Card/index.html",
-    "main.c2dd24fd.css.map": "/Memory-Card/static/css/main.c2dd24fd.css.map",
-    "main.33df84e7.js.map": "/Memory-Card/static/js/main.33df84e7.js.map"
+    "main.6827cf56.css.map": "/Memory-Card/static/css/main.6827cf56.css.map",
+    "main.4f862392.js.map": "/Memory-Card/static/js/main.4f862392.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2dd24fd.css",
-    "static/js/main.33df84e7.js"
+    "static/css/main.6827cf56.css",
+    "static/js/main.4f862392.js"
   ]
 }
